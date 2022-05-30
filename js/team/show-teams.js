@@ -10,6 +10,7 @@ function addRow(team) {
   let colTeam = 0;
 
   let cell = row.insertCell(colTeam++);
+  cell.style.textAlign = 'center';
   cell.innerText = team.teamId;
 
   cell = row.insertCell(colTeam++);

@@ -271,12 +271,17 @@ thead tr {
 }
 
 th, td {
-  padding: 6px 10px;
-  text-align: left;
+   text-align: left;
+}
+
+
+th {
+  padding: 12px 10px;
 }
 
 td {
   border-top: 2px solid white;
+  padding: 6px 10px 6px 10px;
 }
 
 tbody tr:nth-of-type(even) {

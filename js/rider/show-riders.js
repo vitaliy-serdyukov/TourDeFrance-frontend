@@ -38,6 +38,7 @@ function addRow(rider) {
   let colRider = 0;
 
   let cell = row.insertCell(colRider++);
+  cell.style.textAlign = 'center';
   cell.innerText = rider.riderId;
 
   cell = row.insertCell(colRider++);
@@ -68,7 +69,7 @@ function addRow(rider) {
   // update button
   cell = row.insertCell(colRider++);
   const pbUpdate = document.createElement('button');
-  pbUpdate.style.width='max-content';
+  pbUpdate.style.width = 'max-content';
   pbUpdate.innerText = 'Update info';
   pbUpdate.onclick = function () {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
