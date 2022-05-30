@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Show teams</title>
+  <title>Show riders</title>
   <link rel="icon" type="image/png" href="/img/rider.png"/>
   <link href="/css/styling.css" rel="stylesheet">
   <script defer src="/js/config.js"></script>
-  <script defer src="/js/team/fetch-teams.js"></script>
-  <script defer src="/js/team/show-teams.js"></script>
+  <script defer src="/js/rider/fetch-rider.js"></script>
+  <script defer src="/js/rider/show-riders.js"></script>
+  <script defer src="/js/rider/update-rider.js"></script>
+  <script defer src="/js/rider/delete-rider.js"></script>
 
 </head>
 <body id="body">
@@ -36,13 +38,20 @@
         <a href="../index.html"><img alt="tour_de_france" class="tour_de_france" src="/img/tour_de_france.jpg"></a>
       </div>
       <div class="item-form-wrapper"> <!--position absolute-->
-        <table id="teamsTable">
+        <table id="ridersTable">
           <thead>
           <tr>
-            <th colspan="2"><h2>We have the following teams:</h2></th>
+            <th colspan="9"><h2>We have the following riders:</h2></th>
           </tr>
           <tr>
-            <th>Team id:</th>
+            <th>Rider id:</th>
+            <th>Firstname:</th>
+            <th>Lastname:</th>
+            <th>Age:</th>
+            <th>Country:</th>
+            <th>Rider time total:</th>
+            <th>Mountain points:</th>
+            <th>Sprint points:</th>
             <th>Team name:</th>
           </tr>
           </thead>
