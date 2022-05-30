@@ -49,15 +49,6 @@ body {
 
 }
 
-.item-a-main-content, .item-b-main-content, .item-c-main-content {
-  width: 300px;
-  height: 300px;
-  margin: 50px;
-  box-shadow: 0 0 25px 0 #e4480b;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 .item-about-main-content p {
   text-align: left;
   margin-left: 50px;
@@ -72,7 +63,6 @@ header {
   left: 5px;
   right: 5px;
   top: 5px;
-/*  box-shadow: 0 0 25px 0 #3f461c;*/
   box-shadow: 0 0 25px 0 #11120c;
   border-radius: 10px;
   display: flex;
@@ -128,11 +118,12 @@ header li a:hover {
 }
 
 
-input {
+input, select {
   border-radius: 10px;
   padding: 12px 15px;
   border: 1px solid black;
 }
+
 
 input[type="button"], input[type="submit"] {
   border: none;
@@ -143,20 +134,12 @@ input[type="button"]:hover, input[type="submit"]:hover {
   cursor: pointer;
 }
 
-select {
-  border-radius: 10px;
-  padding: 12px 15px;
-  border: 2px solid #e4480b;
-}
-
-
 .field {
   clear: both;
   text-align: right;
   line-height: 25px;
   margin: 8px 0 8px 0;
 }
-
 
 label {
   float: left;
@@ -198,7 +181,6 @@ form.create-form {
   justify-content: space-between;
   font-style: italic;
   font-weight: bolder;
-/*  box-shadow: 0 0 25px 0 #3f461c;*/
   box-shadow: 0 0 25px 0 #11120c;
 }
 

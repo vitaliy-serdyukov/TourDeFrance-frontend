@@ -29,7 +29,7 @@ async function handleFormSubmit(event) {
     const responseData = await postFormDataAsJson(url, formData);
     out(responseData);
     alert(formData.get('firstName').toUpperCase() + ' ' + formData.get('lastName').toUpperCase() +
-      ' er oprettet som en kandidat');
+      ' created');
     riderForm.reset();
 
   } catch (err) {
