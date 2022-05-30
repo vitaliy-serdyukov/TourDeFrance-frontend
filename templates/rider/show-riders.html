@@ -63,58 +63,46 @@
           </tbody>
         </table>
 
-
         <div class="modal" id="myModal">
-
           <div class="modal-content">
             <h2>Update rider info here:</h2>
-
             <span class="close">&times;</span>
-
             <form class="main>">
-
-
               <div class="field">
                 <label for="inpFirstName">Firstname:</label>
                 <input id="inpFirstName" name="inpFirstName" placeholder="inpFirstName" required type="text">
               </div>
-
               <div class="field">
                 <label for="inpLastName">Lastname:</label>
                 <input id="inpLastName" name="inpLastName" placeholder="inpLastName" required type="text">
               </div>
-
-
-
               <div class="field">
                 <label for="inpAge">Age:</label>
                 <input id="inpAge" min="0" name="inpAge" placeholder="inpAge" required
                        type="number">
               </div>
-
-
               <div class="field">
                 <label for="inpCountry">Country:</label>
                 <input id="inpCountry" name="inpCountry" placeholder="inpCountry" required type="text">
               </div>
-
-
               <div class="field">
                 <label for="inpRiderTime">Rider time total:</label>
-                <input id="inpRiderTime" min="0" name="inpRiderTime" placeholder="inpRiderTime" required
-                       type="number">
+                <input id="inpRiderTime" name="inpRiderTime" placeholder="HH:MM:SS" required
+                       type="text">
               </div>
-
-
-              <button class="centered-button-div" id="submitUpdate" title="Update" type="submit">Update rider info</button>
+              <div class="field">
+                <label for="inpMountainPoints">Mountain points:</label>
+                <input id="inpMountainPoints" name="inpMountainPoints" placeholder="0" required type="number" min="0">
+              </div>
+              <div class="field">
+                <label for="inpSprintPoints">Sprint points:</label>
+                <input id="inpSprintPoints" name="inpSprintPoints" placeholder="0" required type="number" min="0">
+              </div>
+              <button class="centered-button-div" id="submitUpdate" title="Update" type="submit">Update rider info
+              </button>
             </form>
           </div>
-
         </div>
-
-
-
-
       </div>
       <div class="item3">
       </div>

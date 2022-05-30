@@ -4,7 +4,7 @@ let riderUpdateUrl = baseurl + updateurl + 'rider/';
 out(riderUpdateUrl);
 
 async function updateRider(rider) {
-  out(rider);
+  out('Here is update rider' + rider);
   url = riderUpdateUrl + rider.riderId;
   out(url);
   out(rider.toString());

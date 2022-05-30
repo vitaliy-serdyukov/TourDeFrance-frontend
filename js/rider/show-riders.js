@@ -12,6 +12,9 @@ const inpLastName = document.getElementById('inpLastName');
 const inpAge = document.getElementById('inpAge');
 const inpCountry = document.getElementById('inpCountry');
 const inpRiderTime = document.getElementById('inpRiderTime');
+const inpMountainPoints = document.getElementById('inpMountainPoints');
+const inpSprintPoints = document.getElementById('inpSprintPoints');
+
 const pbSubmitUpdate = document.getElementById('submitUpdate');
 
 
@@ -75,14 +78,18 @@ function addRow(rider) {
     inpLastName.value = rider.lastName;
     inpAge.value = rider.age;
     inpCountry.value = rider.country;
-    inpRiderTime.value = rider.riderTime;
+    inpRiderTime.value = timeSecondsToString(rider.riderTime);
+    inpMountainPoints.value = rider.mountainPoints;
+    inpSprintPoints.value = rider.sprintPoints;
 
     pbSubmitUpdate.onclick = async function () {
       rider.firstName = inpFirstName.value;
       rider.lastName = inpLastName.value;
       rider.age = inpAge.value;
       rider.country = inpCountry.value;
-      rider.riderTime = inpRiderTime.value;
+      rider.riderTime = timeStringToSeconds(inpRiderTime.value);
+      rider.mountainPoints = inpMountainPoints.value;
+      rider.sprintPoints = inpSprintPoints.value;
       // input points here
       await updateRow(rider);
       modalBox.style.display = 'none';
@@ -102,7 +109,6 @@ function addRow(rider) {
     location.reload();
   }
   cell.appendChild(pbDelete);
-
 }
 
 async function updateRow(rider) {
@@ -110,10 +116,11 @@ async function updateRow(rider) {
   rider.lastName = inpLastName.value;
   rider.age = inpAge.value;
   rider.country = inpCountry.value;
-  rider.riderTime = inpRiderTime.value;
+  rider.riderTime = timeStringToSeconds(inpRiderTime.value);
+  rider.mountainPoints = inpMountainPoints.value;
+  rider.sprintPoints = inpSprintPoints.value;
   const response = await updateRider(rider);
   out(response);
   //crazy rule, Reload page
   location.reload();
 }
-
