@@ -13,10 +13,8 @@ function fetchAllRiders() {
 async function createRiderMap() {
   /*  out("vis alle kandidater");*/
   const riderList = await fetchAllRiders();
-
-  // sorting our array with players by rider time in reverse order
+  // sorting our array with riders by rider time in descending (reverse) order
   riderList.reverse((a, b) => 'a.riderTime'.localeCompare('b.riderTime'));
-
   out(riderList);
   riderList.forEach((rider) => {
     riderMap.set(rider.riderId, rider);
