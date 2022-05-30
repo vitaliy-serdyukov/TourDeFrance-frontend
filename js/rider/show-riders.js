@@ -83,6 +83,7 @@ function addRow(rider) {
     inpMountainPoints.value = rider.mountainPoints;
     inpSprintPoints.value = rider.sprintPoints;
 
+
     pbSubmitUpdate.onclick = async function () {
       rider.firstName = inpFirstName.value;
       rider.lastName = inpLastName.value;
