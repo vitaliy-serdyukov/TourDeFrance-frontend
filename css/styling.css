@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  /* background-image: url("img/tour_de_france.jpg");*/
   background-color: #6294b6;
   margin: 0;
   padding: 5px;
@@ -15,10 +14,6 @@ body {
   text-align: center;
 }
 
-button.go-back {
-  /*  box-shadow: 0 0 25px 0 #e4480b;*/
-  margin: 15px 0 30px 0;
-}
 
 .container-logo {
   display: flex;
@@ -63,71 +58,22 @@ button.go-back {
   overflow: hidden;
 }
 
-.item-about-main-content {
-  background-color: #1f8bca;
-  color: yellow;
-  width: 1000px;
-  height: max-content;
-  margin: 50px;
-  text-align: center;
-  box-shadow: 0 0 25px 0 #e4480b;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 .item-about-main-content p {
   text-align: left;
   margin-left: 50px;
   color: white;
 }
 
-.item-about-main-content h1 {
-  color: yellow;
-}
-
-.container-image-img1 {
-  object-fit: cover;
-  width: 105%;
-  height: 125%;
-}
-
-.container-image-img2 {
-  object-fit: cover;
-  width: 420px;
-  height: auto;
-}
-
-.container-image-img3 {
-  object-fit: cover;
-  margin-left: -75px;
-  width: 470px;
-  height: auto;
-}
-
 .item3 {
   margin: 20px 0 20px 0;
 }
 
-.container-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-
-.shop-item2 {
-}
-
-.item-footer1, .item-footer2, .item-footer3, .item-footer4 {
-  padding: 50px 50px;
-}
-
-header, footer {
+header {
   left: 5px;
   right: 5px;
   top: 5px;
-  box-shadow: 0 0 25px 0 #3f461c;
+/*  box-shadow: 0 0 25px 0 #3f461c;*/
+  box-shadow: 0 0 25px 0 #11120c;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -163,7 +109,7 @@ footer li {
   color: yellow; /* #edc73d*/
 }
 
-header li a, footer li a {
+header li a {
   color: yellow; /* #edc73d*/
   text-decoration: none;
   font-style: italic;
@@ -173,7 +119,7 @@ header li a, footer li a {
 
 }
 
-header li a:hover, footer li a:hover {
+header li a:hover {
   color: #0b84b7; /*#e4480b*/
   background-color: yellow;
   padding: 8px;
@@ -185,7 +131,7 @@ header li a:hover, footer li a:hover {
 input {
   border-radius: 10px;
   padding: 12px 15px;
-  border: 2px solid #e4480b;
+  border: 1px solid black;
 }
 
 input[type="button"], input[type="submit"] {
@@ -242,7 +188,7 @@ label {
   margin-top: 3%;
 }
 
-form.login, form.create-booking, form.create-form {
+form.create-form {
   background-color: #6294b6;
   width: max-content;
   margin-top: 20px;
@@ -252,7 +198,8 @@ form.login, form.create-booking, form.create-form {
   justify-content: space-between;
   font-style: italic;
   font-weight: bolder;
-  box-shadow: 0 0 25px 0 #3f461c;
+/*  box-shadow: 0 0 25px 0 #3f461c;*/
+  box-shadow: 0 0 25px 0 #11120c;
 }
 
 button {
@@ -298,7 +245,7 @@ button:hover {
   border: 1px solid #888;
   border-radius: 10px;
   color: yellow;
-  box-shadow: 0 0 25px 0 #e4480b;
+  box-shadow: 0 0 25px 0 #11120c;
 }
 
 /* The Close Button */
@@ -318,19 +265,19 @@ button:hover {
 
 
 table {
-  background-color: #1f8bca;
+  background-color: #6294b6;
   border-collapse: collapse;
   margin: 25px auto;
   font-size: 0.9em;
   min-width: 400px;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 25px 0 #e4480b;
-
+  box-shadow: 0 0 25px 0 #11120c;
+  font-style: italic;
 }
 
 thead tr {
-  background-color: #1f8bca;
+  background-color: #6294b6;
   color: yellow;
   text-align: center;
   vertical-align: middle;
@@ -345,7 +292,7 @@ td {
 }
 
 tbody tr:nth-of-type(even) {
-  background-color: #1f415d;
+  background-color: #032d72;
   color: white;
 }
 

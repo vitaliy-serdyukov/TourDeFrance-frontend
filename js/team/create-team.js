@@ -31,7 +31,7 @@ async function handleFormSubmit(event) {
     out(err);
   }
 }
-
+// posting team as JSON here
 async function postFormDataAsJson(url, formData) {
 
   const plainFormData = Object.fromEntries(formData.entries());
