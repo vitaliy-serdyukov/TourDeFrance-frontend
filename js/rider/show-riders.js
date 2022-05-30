@@ -53,10 +53,10 @@ function addRow(rider) {
   cell.innerText = timeSecondsToString(rider.riderTime);
 
   cell = row.insertCell(colRider++);
-  cell.innerText = '0';
+  cell.innerText = rider.mountainPoints;
 
   cell = row.insertCell(colRider++);
-  cell.innerText = '0';
+  cell.innerText = rider.sprintPoints;
 
   cell = row.insertCell(colRider++);
   cell.innerText = rider.team.teamName;
@@ -65,6 +65,7 @@ function addRow(rider) {
   // update button
   cell = row.insertCell(colRider++);
   const pbUpdate = document.createElement('button');
+  pbUpdate.style.width='max-content';
   pbUpdate.innerText = 'Update info';
   pbUpdate.onclick = function () {
     document.body.scrollTop = document.documentElement.scrollTop = 0;

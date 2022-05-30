@@ -50,8 +50,8 @@ async function postFormDataAsJson(url, formData) {
     age: plainFormData.age,
     country: plainFormData.country,
     riderTime: timeInSeconds,
-    mountainPoints: 0,
-    sprintPoints: 0,
+    mountainPoints: plainFormData.mountainPoints,
+    sprintPoints: plainFormData.sprintPoints,
     team: {
       teamId: selectedTeam.teamId
     }
