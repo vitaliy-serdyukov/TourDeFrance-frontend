@@ -50,7 +50,7 @@ function addRow(rider) {
   cell.innerText = rider.country;
 
   cell = row.insertCell(colRider++);
-  cell.innerText = rider.riderTime;
+  cell.innerText = timeSecondsToString(rider.riderTime);
 
   cell = row.insertCell(colRider++);
   cell.innerText = '0';
@@ -115,3 +115,4 @@ async function updateRow(rider) {
   //crazy rule, Reload page
   location.reload();
 }
+

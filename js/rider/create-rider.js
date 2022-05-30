@@ -42,12 +42,14 @@ async function handleFormSubmit(event) {
 async function postFormDataAsJson(url, formData) {
   const plainFormData = Object.fromEntries(formData.entries());
 
+  const timeInSeconds = timeStringToSeconds(plainFormData.riderTime);
+
   let rider = {
     firstName: plainFormData.firstName,
     lastName: plainFormData.lastName,
     age: plainFormData.age,
     country: plainFormData.country,
-    riderTime:plainFormData.riderTime,
+    riderTime: timeInSeconds,
     mountainPoints: 0,
     sprintPoints: 0,
     team: {

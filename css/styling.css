@@ -223,13 +223,13 @@ button:hover {
 .modal-content {
   width: max-content;
   height: max-content;
-  background-color: #1f8bca;
-  margin: 15% auto;
+  background-color: #6294b6;
+  margin: 2% auto;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;
   color: yellow;
-  box-shadow: 0 0 25px 0 #11120c;
+  box-shadow: 15px 0 25px 0 #11120c;
 }
 
 /* The Close Button */
@@ -272,6 +272,7 @@ thead tr {
 
 th, td {
   padding: 12px 15px;
+  text-align: left;
 }
 
 td {

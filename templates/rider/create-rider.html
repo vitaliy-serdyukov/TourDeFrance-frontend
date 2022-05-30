@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="/img/rider.png"/>
   <link href="/css/styling.css" rel="stylesheet">
   <script defer src="/js/config.js"></script>
+  <script defer src="/js/time-convertors.js"></script>
   <script defer src="/js/team/fetch-teams.js"></script>
   <script defer src="/js/rider/create-rider.js"></script>
 </head>
@@ -18,10 +19,10 @@
         <div class="item1-header">
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Rider register</a></li>
-            <li><a href="#">Show all riders</a></li>
+            <li><a href="show-riders.html">Show all riders</a></li>
             <li><a href="#">Show riders by team</a></li>
-            <li><a href="show-teams.html">Show all teams</a></li>
+            <li><a href="../team/show-teams.html">Show all teams</a></li>
+            <li><a href="../team/create-team.html">Create new team</a></li>
           </ul>
         </div>
       </div>
@@ -32,7 +33,7 @@
     <div class="container-main-content">
 
       <div class="relative-position">
-        <a href="index.html"><img alt="tour_de_france" class="tour_de_france" src="/img/tour_de_france.jpg"></a>
+        <a href="../index.html"><img alt="tour_de_france" class="tour_de_france" src="/img/tour_de_france.jpg"></a>
       </div>
       <div class="item-form-wrapper"> <!--position absolute-->
 
@@ -57,7 +58,7 @@
             </div>
             <div class="field">
               <label for="riderTime">Rider time total:</label>
-              <input id="riderTime" name="riderTime" placeholder="10000" required type="number" min="0">
+              <input id="riderTime" name="riderTime" placeholder="HH:MM:SS" required type="text" min="0">
             </div>
             <div class="field">
             <label for="teamSelect">Choose the team:</label>

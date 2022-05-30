@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="/img/rider.png"/>
   <link href="/css/styling.css" rel="stylesheet">
   <script defer src="/js/config.js"></script>
+  <script defer src="/js/time-convertors.js"></script>
   <script defer src="/js/rider/fetch-rider.js"></script>
   <script defer src="/js/rider/show-riders.js"></script>
   <script defer src="/js/rider/update-rider.js"></script>
@@ -21,10 +22,10 @@
         <div class="item1-header">
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Rider register</a></li>
-            <li><a href="#">Show all riders</a></li>
+            <li><a href="create-rider.html">Rider register</a></li>
             <li><a href="#">Show riders by team</a></li>
             <li><a href="../team/create-team.html">Create new team</a></li>
+            <li><a href="../team/show-teams.html">Show all teams</a></li>
           </ul>
         </div>
       </div>
@@ -41,7 +42,7 @@
         <table id="ridersTable">
           <thead>
           <tr>
-            <th colspan="11"><h2>We have the following riders:</h2></th>
+            <th style="text-align: center" colspan="11"><h2>We have the following riders:</h2></th>
           </tr>
           <tr>
             <th>Rider id:</th>
@@ -74,32 +75,32 @@
 
 
               <div class="field">
-                <label for="inpFirstName">Kandidat navn:</label>
+                <label for="inpFirstName">Firstname:</label>
                 <input id="inpFirstName" name="inpFirstName" placeholder="inpFirstName" required type="text">
               </div>
 
               <div class="field">
-                <label for="inpLastName">Kandidat navn:</label>
+                <label for="inpLastName">Lastname:</label>
                 <input id="inpLastName" name="inpLastName" placeholder="inpLastName" required type="text">
               </div>
 
 
 
               <div class="field">
-                <label for="inpAge">Kandidat stemmetal:</label>
+                <label for="inpAge">Age:</label>
                 <input id="inpAge" min="0" name="inpAge" placeholder="inpAge" required
                        type="number">
               </div>
 
 
               <div class="field">
-                <label for="inpCountry">Kandidat navn:</label>
+                <label for="inpCountry">Country:</label>
                 <input id="inpCountry" name="inpCountry" placeholder="inpCountry" required type="text">
               </div>
 
 
               <div class="field">
-                <label for="inpRiderTime">Kandidat stemmetal:</label>
+                <label for="inpRiderTime">Rider time total:</label>
                 <input id="inpRiderTime" min="0" name="inpRiderTime" placeholder="inpRiderTime" required
                        type="number">
               </div>
