@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create team</title>
+  <link rel="icon" type="image/png" href="/img/rider.png"/>
+  <link href="/css/styling.css" rel="stylesheet">
+  <script defer src="/js/config.js"></script>
+  <script defer src="/js/team/create-team.js"></script>
+</head>
+<body id="body">
+
+<div class="container">
+  <div class="item1">
+    <header class="header-height" id="header">
+      <div class="container-header">
+        <div class="item1-header">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Rider register</a></li>
+            <li><a href="#">Show all riders</a></li>
+            <li><a href="#">Show riders by team</a></li>
+            <li><a href="show-teams.html">Show all teams</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="item2">
+    <div class="container-main-content">
+
+      <div class="relative-position">
+        <a href="index.html"><img alt="tour_de_france" class="tour_de_france" src="/img/tour_de_france.jpg"></a>
+      </div>
+      <div class="item-form-wrapper"> <!--position absolute-->
+
+        <form class="create-form" id="newTeamForm" method="post">
+          <div class="main">
+            <h2>Create new team here:</h2>
+            <div class="field">
+              <label for="teamName">Team name:</label>
+              <input id="teamName" name="teamName" placeholder="F.ex. 'My team'" required type="text">
+            </div>
+            <div class="centered-button-div">
+              <button class="submit" id="submitParti" title="tSave new team" type="submit">Save new team</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="item3">
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

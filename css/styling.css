@@ -7,7 +7,7 @@ html {
 }
 
 body {
- /* background-image: url("img/tour_de_france.jpg");*/
+  /* background-image: url("img/tour_de_france.jpg");*/
   background-color: #6294b6;
   margin: 0;
   padding: 5px;
@@ -51,6 +51,7 @@ button.go-back {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
 }
 
 .item-a-main-content, .item-b-main-content, .item-c-main-content {
@@ -168,10 +169,15 @@ header li a, footer li a {
   font-style: italic;
   font-weight: bolder;
   font-size: 20px;
+  text-transform: uppercase;
+
 }
 
 header li a:hover, footer li a:hover {
-  color: #e4480b;
+  color: #0b84b7; /*#e4480b*/
+  background-color: yellow;
+  padding: 8px;
+  border-radius: 10px;
   /* text-decoration: none;*/
 }
 
@@ -229,37 +235,44 @@ label {
   margin-top: 20px;
 }
 
-.item-login, .item-create-booking, .item-create-activity, .item-show-activities {
-  margin: 10px 0 10px 0;
+.item-form-wrapper {
   padding-bottom: 20px;
+  display: block;
+  position: absolute;
+  margin-top: 3%;
 }
 
 form.login, form.create-booking, form.create-form {
-  background-color: #1f8bca;
+  background-color: #6294b6;
   width: max-content;
   margin-top: 20px;
-  /* box-shadow: 0 0 25px 0 #e4480b;*/
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-style: italic;
+  font-weight: bolder;
+  box-shadow: 0 0 25px 0 #3f461c;
 }
 
 button {
-  width: 150px;
+  width: max-content;
   text-decoration: none;
   user-select: none;
-  padding: .7em 1.5em;
+  padding: .7em 1.5em .7em 1.5em;
   outline: none;
   margin: 10px;
   border-radius: 10px;
   color: yellow;
-  background-color: #16100c;
-  border: 2px solid #e4480b;
+  background-color: #6294b6;
+  border: 2px solid black;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 button:hover {
-  background-color: #8c6338;
+  color: #0b84b7;
+  background-color: yellow;
   cursor: pointer;
 }
 
@@ -342,4 +355,9 @@ tbody tr:last-of-type {
 
 td button {
   width: 100px;
+}
+
+.relative-position {
+  display: block;
+  position: relative;
 }
