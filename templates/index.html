@@ -6,6 +6,8 @@
   <link rel="icon" type="image/png" href="/img/rider.png"/>
   <link href="/css/styling.css" rel="stylesheet">
   <script defer src="/js/config.js"></script>
+  <script defer src="/js/rider/fetch-rider.js"></script>
+  <script defer src="/js/rider/show-t-shirts.js"></script>
 </head>
 <body id="body">
 
@@ -24,13 +26,35 @@
             <li><a href="#">Show by team</a></li>
           </ul>
         </div>
+      </div>
     </header>
   </div>
+
+
   <div class="item2">
     <div class="container-main-content">
-      <a href="index.html"> <img alt="tour_de_france" class="tour_de_france" src="/img/tour_de_france.jpg"></a>
-    </div>
-  </div>
+
+      <div class="relative-position">
+        <a href="index.html"><img alt="tour_de_france" class="tour_de_france" src="/img/tour_de_france.jpg"></a>
+      </div>
+      <div class="item-form-wrapper"> <!--position absolute-->
+        <table id="tShirtsTable">
+          <thead>
+          <tr>
+            <th style="text-align: center" colspan="11"><h2>We have the following riders<br> with t-shirts:</h2></th>
+          </tr>
+          <tr>
+            <th>Yellow t-shirt:</th>
+            <th>Mountain t-shirt:</th>
+            <th>Green t-shirt:</th>
+            <th>White t-shirt:</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr></tr>
+          </tbody>
+        </table>
+
   <div class="item3">
   </div>
 </div>

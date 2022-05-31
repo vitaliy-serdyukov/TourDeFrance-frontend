@@ -13,15 +13,15 @@ function fetchAllRiders() {
 async function createRiderMap() {
   const riderList = await fetchAllRiders();
   const sortedList = sortByRiderTime(riderList);
-  out(riderList);
   sortedList.forEach((rider) => {
     riderMap.set(rider.riderId, rider);
   })
 
- /* out('y ' + getYellowTshit(sortedList));
-  out('m ' + getMountainTshirt(sortedList));
-  out('g ' + getGreenTshirt(sortedList));
-  out('w ' + getWhiteTshirt(riderList));*/
+
+ out('y ' + getYellowTshit(sortedList));
+ out('m ' + getMountainTshirt(sortedList));
+ out('g ' + getGreenTshirt(sortedList));
+ out('w ' + getWhiteTshirt(riderList));
 }
 
 
@@ -33,11 +33,10 @@ function sortByRiderTime(riderList) {
 }
 
 
-
 // method to define the rider with yellow T-shirt
 function getYellowTshit(timeSort) { // a yellow t-shirt
   sortByRiderTime(timeSort);
-  return timeSort[0].firstName + ' ' + timeSort[0].lastName;
+  return timeSort[0].firstName /*+ ' ' + timeSort[0].lastName*/;
 }
 
 
@@ -50,7 +49,7 @@ function getMountainTshirt(riderList) {
 
 }
 
-// method to define the rider with green T-shirt
+// method to define the rider with green T-shirt TODO not sure if it does work correct
 function getGreenTshirt(riderList) {
   const spSort = riderList.reverse((a, b) => {
     return a.sprintPoints - b.sprintPoints;
