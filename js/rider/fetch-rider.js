@@ -10,6 +10,13 @@ function fetchAllRiders() {
   return fetch(ridersUrl).then(response => response.json());
 }
 
+
+/**
+ *  method to sort our list with riders by rider time in ascending order
+  *  @return {Map} riderMap
+ *  @author Vitaliy
+ */
+
 async function createRiderMap() {
   const riderList = await fetchAllRiders();
   const sortedList = sortByRiderTime(riderList);
@@ -17,14 +24,20 @@ async function createRiderMap() {
     riderMap.set(rider.riderId, rider);
   })
 
-
- out('y ' + getYellowTshit(sortedList));
- out('m ' + getMountainTshirt(sortedList));
- out('g ' + getGreenTshirt(sortedList));
- out('w ' + getWhiteTshirt(riderList));
+// 't-shirt methods' tested here
+  out('yellow ' + getYellowTshit(sortedList));
+  out('mountain ' + getMountainTshirt(sortedList));
+  out('green ' + getGreenTshirt(sortedList));
+  out('white ' + getWhiteTshirt(riderList));
 }
 
 
+/**
+ *  method to sort our list with riders by rider time in ascending order
+ *  @param {[]} riderList
+ *  @return {[]}
+ *  @author Vitaliy
+ */
 // sorting our list with riders by rider time in ascending order
 function sortByRiderTime(riderList) {
   return riderList.sort((a, b) => {
@@ -33,14 +46,27 @@ function sortByRiderTime(riderList) {
 }
 
 
-// method to define the rider with yellow T-shirt
+/**
+ *  method to define the rider with yellow T-shirt
+ *  @param {[]} riderList
+ *  @return {string} firstname + lastname
+ *  @author Vitaliy
+ */
+
 function getYellowTshit(timeSort) { // a yellow t-shirt
   sortByRiderTime(timeSort);
-  return timeSort[0].firstName /*+ ' ' + timeSort[0].lastName*/;
+  /*return timeSort[0].firstName + ' ' + timeSort[0].lastName;*/
+  return timeSort[0];
 }
 
 
-// method to define the rider with mountain T-shirt
+/**
+ *  method to define the rider with mountain T-shirt
+ *  @param {[]} riderList
+ *  @return {string} firstname + lastname
+ *  @author Vitaliy
+ */
+
 function getMountainTshirt(riderList) {
   const mountSort = riderList.reverse((a, b) => {
     return a.mountainPoints - b.mountainPoints;
@@ -49,6 +75,13 @@ function getMountainTshirt(riderList) {
 
 }
 
+/**
+ *  method to define the rider with green T-shirt
+ *  @param {[]} riderList
+ *  @return {string} firstname + lastname
+ *  @author Vitaliy
+ */
+
 // method to define the rider with green T-shirt TODO not sure if it does work correct
 function getGreenTshirt(riderList) {
   const spSort = riderList.reverse((a, b) => {
@@ -56,6 +89,14 @@ function getGreenTshirt(riderList) {
   });
   return spSort[0].firstName + ' ' + spSort[0].lastName;
 }
+
+
+/**
+ *  method to define the rider with white T-shirt
+ *  @param {[]} riderList
+ *  @return {string} firstname + lastname
+ *  @author Vitaliy
+ */
 
 // method to define the rider with white T-shirt
 function getWhiteTshirt(riderList) {
