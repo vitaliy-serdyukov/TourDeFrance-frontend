@@ -6,31 +6,30 @@ const riderMap = new Map();
 out(ridersUrl);
 
 function fetchAllRiders() {
-   out("calling all riders here");
+  out("calling all riders here");
   return fetch(ridersUrl).then(response => response.json());
 }
 
 async function createRiderMap() {
-  /*  out("vis alle kandidater");*/
+  /*  out("show all riders");*/
   const riderList = await fetchAllRiders();
-  // sorting our array with riders by rider time in descending (reverse) order TODO doesn't work 100 procent
-  riderList.reverse((a, b) => 'a.riderTime'.localeCompare('b.riderTime'));
+  const sortedList = sortListByRiderTime(riderList);
   out(riderList);
-  riderList.forEach((rider) => {
+  sortedList.forEach((rider) => {
     riderMap.set(rider.riderId, rider);
   })
 }
 
 
 
-/*/!*  const riderList = await fetchAllRiders();*!/
-  let sortable = [];
-  for (let rider in riderList) {
-    sortable.push([rider, rider.riderTime[rider]]);
-  }
-
-  sortable.sort(function (a, b) {
-    return a[1] - b[1];
+// sorting our list with riders by rider time in descending (reverse) order TODO doesn't work 100 procent
+function sortListByRiderTime(riderList) {
+  return riderList.sort((a, b) => {
+    return a.riderTime - b.riderTime
   });
-  out('sortable');
-  out(sortable);*/
+}
+
+/*function getQuckestRider(sort){
+  sortListByRiderTime(riderList)
+  return
+}*/
