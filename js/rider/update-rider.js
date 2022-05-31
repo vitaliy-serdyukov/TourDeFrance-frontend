@@ -1,5 +1,3 @@
-out('Update kandidat');
-
 let riderUpdateUrl = baseurl + updateurl + 'rider/';
 out(riderUpdateUrl);
 

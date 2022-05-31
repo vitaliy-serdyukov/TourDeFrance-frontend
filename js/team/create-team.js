@@ -1,5 +1,3 @@
-out('vi er i create-team');
-
 //generate api from config file
 const url = baseurl + createurl + 'team';
 

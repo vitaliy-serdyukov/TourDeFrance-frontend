@@ -1,5 +1,3 @@
-/*out('vi er i gang med at lave en tabel af partier');*/
-
 const teamsTable = document.getElementById("teamsTable");
 document.addEventListener('DOMContentLoaded', createTableFromMap);
 
