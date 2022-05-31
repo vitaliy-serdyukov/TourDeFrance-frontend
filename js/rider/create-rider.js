@@ -1,5 +1,3 @@
-out ('vi are in create rider');
-
 //generate api from config file
 const url = baseurl + createurl + 'rider';
 

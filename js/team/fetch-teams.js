@@ -1,5 +1,3 @@
-out('vi er i gang med at fetch team');
-
 const teamsUrl = baseurl + 'teams';
 const teamMap = new Map();
 
